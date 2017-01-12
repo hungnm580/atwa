@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.0" xmlns="http://java.sun.com/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd">
+  <persistence-unit name="ConsultingAgencyPU" transaction-type="RESOURCE_LOCAL">
+    <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+    <class>JavaDB.Customer</class>
+    <class>JavaDB.DiscountCode</class>
+    <class>JavaDB.PurchaseOrder</class>
+    <class>JavaDB.Product</class>
+    <class>JavaDB.MicroMarket</class>
+    <class>JavaDB.Manufacturer</class>
+    <class>JavaDB.ProductCode</class>
+    <class>mySQL.TimeZoneTransition</class>
+    <class>mySQL.Plugin</class>
+    <class>mySQL.Func</class>
+    <class>mySQL.TablesPriv</class>
+    <class>mySQL.TimeZoneName</class>
+    <class>mySQL.TimeZoneTransitionType</class>
+    <class>mySQL.HelpCategory</class>
+    <class>mySQL.NdbBinlogIndex</class>
+    <class>mySQL.ProxiesPriv</class>
+    <class>mySQL.User</class>
+    <class>mySQL.ColumnsPriv</class>
+    <class>mySQL.Servers</class>
+    <class>mySQL.TimeZoneLeapSecond</class>
+    <class>mySQL.ProcsPriv</class>
+    <class>mySQL.Event</class>
+    <class>mySQL.Proc</class>
+    <class>mySQL.TimeZone</class>
+    <class>mySQL.HelpKeyword</class>
+    <class>mySQL.Db</class>
+    <class>mySQL.Host</class>
+    <class>mySQL.HelpRelation</class>
+    <class>mySQL.HelpTopic</class>
+    <exclude-unlisted-classes>false</exclude-unlisted-classes>
+    <properties>
+      <property name="javax.persistence.jdbc.url" value="jdbc:derby://localhost:1527/sample"/>
+      <property name="javax.persistence.jdbc.password" value="app"/>
+      <property name="javax.persistence.jdbc.driver" value="org.apache.derby.jdbc.ClientDriver"/>
+      <property name="javax.persistence.jdbc.user" value="app"/>
+    </properties>
+  </persistence-unit>
+</persistence>
