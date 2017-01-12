@@ -35,8 +35,7 @@ public class Event {
 		try{
 
 			WebElements elem = listElement.getElementByName(html_id);
-			WebElement webelem = driver.findElement(By.id(elem.getHtml_id()));
-			
+			WebElement webelem = driver.findElement(By.id(elem.getHtml_id())); 
 			if (this.action.compareTo(WebdriverActionType.ADDTEXT)==0){
 				webelem.clear();
 				webelem.sendKeys(elem.getValueAt(test_current));

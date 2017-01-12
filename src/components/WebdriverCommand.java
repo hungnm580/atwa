@@ -220,6 +220,7 @@ public class WebdriverCommand {
 				break;
 			}
 			// check state sau do
+			
 			if (!s2.checkState(driver, test_c)){
 				passone = false;
 				textFail += "\n\nFAIL HERE!!\n";

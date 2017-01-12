@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this template, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:h="http://java.sun.com/jsf/html" xmlns:f="http://java.sun.com/jsf/core">
+    <head>
+        <title id="chooseGUI">#{loginPage.username}</title>
+    </head>
+    <body>
+        <h:form id="choose">
+            Xin chào, <h:outputText value="#{loginPage.username}"/> <br/>
+            
+            <h3>Chọn giao diện thao tác:</h3>
+            <h:selectOneListbox id="GUI" value="#{loginPage.chosenG}">
+                <f:selectItem id ="user" itemLabel="User" itemValue="UserGUI"/>
+                <f:selectItem id ="subj" itemLabel="Subject" itemValue="subjGUI"/>
+            </h:selectOneListbox>
+            <br/>
+            <h:commandButton id="btnSubmit" value="Submit" action="#{loginPage.chosenGUI()}"/>
+        </h:form>
+    </body>
+</html>

@@ -24,12 +24,14 @@ public class Test {
 		pwd.sendKeys("admin");
 		try {
 			//sbm.click();
-			driver.findElement(By.id("index:btnSubmit")).sendKeys(Keys.ENTER);
+			System.out.println("start");
+			WebElement w = driver.findElement(By.xpath("/html/body/form[@id='index']/table/tbody/tr[3]/td[2]/input[@id='index:btnReset']"));
+			
+			w.sendKeys(Keys.ENTER);
+			//String value = driver.getTitle();
+			System.out.println();
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		
-		
 	}
-
 }

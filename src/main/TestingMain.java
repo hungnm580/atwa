@@ -131,6 +131,7 @@ public class TestingMain extends JFrame {
     	boolean b1 = true;
 		
 		//b1 = runTestCase(resultF1, resultF2, link, 00, true);
+
 		b1 = runTestCase(resultF1, link, 00, true);
 		
 		if (b1){
@@ -146,19 +147,22 @@ public class TestingMain extends JFrame {
     	String escaped = input.replace("\\", "\\\\");
     	return escaped;
     }
-    
-	/**
-	 *	 runTest case
-	 */
-	
 	//------------------------------------------------------------------------------------
+    
+    /**
+     * Run TestCases with url and excel files given
+     * @param foldercontains excel files
+     * @param url
+     * @param delay delay time
+     * @param islogging show execution log
+     * @return
+     */
     public static boolean runTestCase(String folder, String url, int delay, boolean islogging){
 		boolean b1 = false;
 		
 		try{
 			
 			//WebdriverCommand webcom = new WebdriverCommand("abc",  new File(filename));
-			
 			WebdriverCommand webcom = new WebdriverCommand("abc",  folder);
 			
 			System.out.println("FILE OK");

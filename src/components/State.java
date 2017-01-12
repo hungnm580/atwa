@@ -77,8 +77,7 @@ public class State {
 		}
 	}
 	
-	public String getStringFromHtmlById(WebElement webelem, WebElements eh, int test_current){
-		
+	public String getStringFromHtmlById(WebDriver driver, WebElement webelem, WebElements eh, int test_current){
 		try{
 			String value = "";
 			if (eh.getType().compareTo(ElementType.TEXTBOX) == 0){
@@ -103,6 +102,9 @@ public class State {
 				Select clickThis = new Select(webelem);			
 				clickThis.selectByValue(eh.getValueAt(test_current));
 				value = eh.getValueAt(test_current);
+			}
+			else if(eh.getType().compareTo(ElementType.TITLE)==0){
+				value = driver.getTitle();
 			}
 			else {
 				
@@ -133,7 +135,7 @@ public class State {
 				}
 				
 				WebElement webelem = driver.findElement(By.id(eh.getHtml_id()));	
-				String value = getStringFromHtmlById(webelem, eh, test_current);
+				String value = getStringFromHtmlById(driver, webelem, eh, test_current);
 				if (e.getStatus().compareTo(ElementStatusValue.EMPTY)==0){
 					if (value.length()!=0){
 						System.out.println("f1");
